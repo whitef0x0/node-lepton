@@ -1,0 +1,33 @@
+~
+~
+~
+                                                                      1,1           All
+{
+  "name": "node-leption",
+  "version": "1.0.0",
+  "description": "NodeJS Wrapper Library for Dropbox Leption",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitef0x0/node-lepton.git"
+  },
+  "keywords": [
+    "lepton",
+    "jpeg",
+    "compression",
+    "jpeg",
+    "compression",
+    "dropbox",
+    "dropbox",
+    "lepton"
+  ],
+  "author": "David Baldwynn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/whitef0x0/node-lepton/issues"
+  },
+  "homepage": "https://github.com/whitef0x0/node-lepton#readme"
+}
