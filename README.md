@@ -9,9 +9,35 @@ Quick start
 First, run `npm install node-lepton --save` for your app. Then, in an Express app:
 
 ```js
-var pdfFiller = require('node-lepton');
+var lepton = require('node-lepton');
 
 // ...
+```
+
+Then you want to set your configuration.
+
+```js
+lepton.configure({
+  unjailed: true,
+});
+```
+
+After this you can run one of two commands, compress or decompress. You must provide a valid path for either of these functions to work.
+
+These functions takes a callback that returns an error object and the output in form of a binary file blob.
+
+```js
+lepton.compress('../../aoeu.jpeg', function(err, output){
+  if(err) throw err;
+  
+  console.log(output);
+});
+
+lepton.decompress('../../aoeu.lep' function(err, output){
+  if(err) throw err;
+  
+  console.log(output);
+});
 ```
 
 ##Options
