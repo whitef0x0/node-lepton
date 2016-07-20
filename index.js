@@ -8,7 +8,6 @@
 (function(){
     var child_process = require('child_process'),
         exec = require('child_process').exec,
-        _ = require('lodash'),
         fs = require('fs');
 
     var node_lepton = {
