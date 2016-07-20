@@ -13,3 +13,39 @@ var pdfFiller = require('node-lepton');
 
 // ...
 ```
+
+##Options
+
+####unjailed
+  type: Boolean
+
+####single_thread
+  type: Boolean
+
+####max_children
+  type: Integer
+
+####preload
+  type: Boolean
+
+####allow_progressive
+  type: Boolean
+
+####fork
+  type: Boolean
+
+####zlib
+  type: Boolean
+
+####timebound
+  type: Integer (in ms)
+  
+####Socket
+  type: Boolean or Integer (port)
+  
+####Listen
+  type: Boolean or Integer
+  
+####ZLibListen
+  type: Boolean or Integer
+  
