@@ -1,6 +1,6 @@
 Node-Lepton
 ===========
-A NodeJS wrapper library for Dropbox JPEG Letpion Compression Library
+A NodeJS wrapper library for Dropbox JPEG Letpon compression tool.
 
 Quick start
 -----------
