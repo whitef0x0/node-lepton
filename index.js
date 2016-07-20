@@ -12,7 +12,7 @@
         fs = require('fs');
 
     var node_lepton = {
-        compress: function( sourceFile, compressedFile, callback){
+        compress: function( sourceFile, compressedFile, options, callback){
             exec( "lepton -memory=1024M -threadmemory=128M " + sourceFile + " " + compressedFile, function (error, stdout, stderr) {
                 if (error) {
                     console.error('exec error: ' + error);
@@ -22,7 +22,7 @@
                 return callback(null);
             });
         },
-        decompress: function( sourceFile, decompressedFile, callback){
+        decompress: function( sourceFile, decompressedFile, options, callback){
 
             exec( "lepton -memory=1024M -threadmemory=128M " + sourceFile + " " + decompressedFile, function (error, stdout, stderr) {
                 if (error) {
