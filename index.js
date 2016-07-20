@@ -13,23 +13,25 @@
         fs = require('fs');
 
     var node_lepton = {
-
-        compress: function( sourceFile, callback){
-            var regName = /FieldName: ([^\n]*)/,
-                regType = /FieldType: ([A-Za-z\t .]+)/,
-                regFlags = /FieldFlags: ([0-9\t .]+)/,
-                fieldArray = [],
-                currField = {};
-
-            if(nameRegex !== null && (typeof nameRegex) == 'object' ) regName = nameRegex;
-
-            exec( "lepton " + sourceFile, function (error, stdout, stderr) {
+        compress: function( sourceFile, compressedFile, callback){
+            exec( "lepton -memory=1024M -threadmemory=128M " + sourceFile + " " + compressedFile, function (error, stdout, stderr) {
                 if (error) {
                     console.error('exec error: ' + error);
-                    return callback(error, null);
+                    return callback(error);
                 }
                 
-                return callback(null, stdout);
+                return callback(null);
+            });
+        },
+        decompress: function( sourceFile, decompressedFile, callback){
+
+            exec( "lepton -memory=1024M -threadmemory=128M " + sourceFile + " " + decompressedFile, function (error, stdout, stderr) {
+                if (error) {
+                    console.error('exec error: ' + error);
+                    return callback(error);
+                }
+                
+                return callback(null);
             });
         },
     };
