@@ -14,26 +14,26 @@ var lepton = require('node-lepton');
 // ...
 ```
 
-Then you want to set your configuration.
-
-```js
-lepton.configure({
-  unjailed: true,
-});
-```
-
 After this you can run one of two commands, compress or decompress. You must provide a valid path for either of these functions to work.
 
 These functions takes a callback that returns an error object and the output in form of a binary file blob.
 
 ```js
-lepton.compress('../../aoeu.jpeg', '../../aoeu.lep', function(err){
+lepton.compress('../../aoeu.jpeg', '../../aoeu.lep', 
+{
+  unjailed: true,
+},
+function(err){
   if(err) throw err;
   
   console.log('Successfully compressed aoeu.jpeg');
 });
 
-lepton.decompress('../../aoeu.lep', '../../aoeu.jpeg', function(err){
+lepton.decompress('../../aoeu.lep', '../../aoeu.jpeg', 
+{
+  unjailed: true,
+},
+function(err){
   if(err) throw err;
   
   console.log('Successfully decompressed aoeu.lep');
