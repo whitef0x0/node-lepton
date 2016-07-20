@@ -1,10 +1,9 @@
 /*
-*   File:       index.js (pdffiller)
-*   Project:    PDF Filler
-*   Date:       May 2015.
+*   File:       index.js (node-lepton)
+*   Project:    Node-Lepton
+*   Date:       July 2016.
 *
-*   Description: This PDF filler module takes a data set and creates a filled out
-*                PDF file with the form fields populated.
+*   Description: This npm module provides a wrapper for using Dropbox's Lepton in Nodejs code
 */
 (function(){
     var child_process = require('child_process'),
