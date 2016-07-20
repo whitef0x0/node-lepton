@@ -27,16 +27,16 @@ After this you can run one of two commands, compress or decompress. You must pro
 These functions takes a callback that returns an error object and the output in form of a binary file blob.
 
 ```js
-lepton.compress('../../aoeu.jpeg', function(err, output){
+lepton.compress('../../aoeu.jpeg', '../../aoeu.lep', function(err){
   if(err) throw err;
   
-  console.log(output);
+  console.log('Successfully compressed aoeu.jpeg');
 });
 
-lepton.decompress('../../aoeu.lep' function(err, output){
+lepton.decompress('../../aoeu.lep', '../../aoeu.jpeg', function(err){
   if(err) throw err;
   
-  console.log(output);
+  console.log('Successfully decompressed aoeu.lep');
 });
 ```
 
