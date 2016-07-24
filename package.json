@@ -1,14 +1,11 @@
-~
-~
-~
-                                                                      1,1           All
 {
-  "name": "node-leption",
+  "name": "node-lepton",
   "version": "1.0.0",
-  "description": "NodeJS Wrapper Library for Dropbox Leption",
+  "description": "NodeJS Wrapper Library for Dropbox Lepton",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "git clone https://github.com/dropbox/lepton.git lepton_code; cd lepton_code; ./autogen.sh; ./configure; make; make check"
   },
   "repository": {
     "type": "git",
@@ -29,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/whitef0x0/node-lepton/issues"
   },
-  "homepage": "https://github.com/whitef0x0/node-lepton#readme"
+  "homepage": "https://github.com/whitef0x0/node-lepton#readme",
+  "devDependencies": {
+    "tape": "^4.6.0"
+  }
 }
