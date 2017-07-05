@@ -40,38 +40,38 @@ function(err, data){
 });
 ```
 
-##Options
+## Options
 
-####unjailed
+#### unjailed
   type: Boolean
 
-####single_thread
+#### single_thread
   type: Boolean
 
-####max_children
+#### max_children
   type: Integer
 
-####preload
+#### preload
   type: Boolean
 
-####allow_progressive
+#### allow_progressive
   type: Boolean
 
-####fork
+#### fork
   type: Boolean
 
-####zlib
+#### zlib
   type: Boolean
 
-####timebound
+#### timebound
   type: Integer (in ms)
   
-####Socket
+#### Socket
   type: Boolean or Integer (port)
   
-####Listen
+#### Listen
   type: Boolean or Integer
   
-####ZLibListen
+#### ZLibListen
   type: Boolean or Integer
   
