@@ -8,8 +8,7 @@
 
 
 (function(){
-    var child_process = require('child_process'),
-        exec = require('child_process').exec,
+    var exec = require('child_process').exec,
         fs = require('fs');
 
     var node_lepton = {
